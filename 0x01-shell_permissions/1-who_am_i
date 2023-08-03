@@ -1,2 +1,2 @@
 #!/bin/bash
-whoami
+echo "You are running this script as root user!"
