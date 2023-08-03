@@ -1,0 +1,3 @@
+#!/bin/bash
+sudo ./switch_to_user.betty
+
