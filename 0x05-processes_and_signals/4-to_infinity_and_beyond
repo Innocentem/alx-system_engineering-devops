@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# prints the message infinity and beyond for
+# eternity unless it is muredered
+
+while true;
+do
+	echo "To infinity and beyond";
+	sleep 2
+done
+
