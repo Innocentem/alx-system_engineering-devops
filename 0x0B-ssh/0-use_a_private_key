@@ -2,5 +2,5 @@
 # Bash script that uses ssh to connect to your server using the private
 # key
 
-ssh ubuntu@54.237.4.27
+ssh -i ~/.ssh/school ubuntu@54.237.4.27
 
