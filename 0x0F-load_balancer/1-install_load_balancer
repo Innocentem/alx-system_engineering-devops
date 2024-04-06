@@ -7,6 +7,10 @@ echo -e "Updating and doing some minor checks...\n"
 function install() {
 	command -v "$1" &> /dev/null
 
+<<<<<<< HEAD
+=======
+	#shellcheck disable=SC2181
+>>>>>>> e90f3dacdd44c8ecce67ce37a52f67ff8ea3f832
 	if [ $? -ne 0 ]; then
 		echo -e "	Installing: $1\n"
 		sudo apt-get update -y -qq && \
@@ -21,6 +25,10 @@ install haproxy #install haproxy
 
 echo -e "\nSetting up some minor stuff.\n"
 
+<<<<<<< HEAD
+=======
+# backup default server config file
+>>>>>>> e90f3dacdd44c8ecce67ce37a52f67ff8ea3f832
 sudo cp /etc/haproxy/haproxy.cfg haproxy_default.backup
 
 server_config=\
@@ -41,8 +49,16 @@ backend clickviral-tech-backend
     server 151666-web-01 100.25.190.21:80 check
     server 151666-web-02 54.160.77.90:80 check
 "
+<<<<<<< HEAD
 echo "$server_config" | sudo dd status=none of=/etc/haproxy/haproxy.cfg
 
+=======
+
+# shellcheck disable=SC2154
+echo "$server_config" | sudo dd status=none of=/etc/haproxy/haproxy.cfg
+
+# enable haproxy to be started by init script
+>>>>>>> e90f3dacdd44c8ecce67ce37a52f67ff8ea3f832
 echo "ENABLED=1" | sudo dd status=none of=/etc/default/haproxy
 
 echo "configured - Roundrobin On web-01 & web-02"
@@ -52,4 +68,7 @@ if [ "$(pgrep -c haproxy)" -le 0 ]; then
 else
 	sudo service haproxy restart
 fi
+<<<<<<< HEAD
 
+=======
+>>>>>>> e90f3dacdd44c8ecce67ce37a52f67ff8ea3f832
