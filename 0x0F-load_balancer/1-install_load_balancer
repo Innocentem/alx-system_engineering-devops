@@ -41,7 +41,7 @@ frontend innocente-frontend
 backend innocente-backend
     balance roundrobin
     server 513937-web-01 54.237.4.27:80 check
-    server 513937-web-02 100.25.221.161:80 check
+    server 513937-web-02 18.210.16.150:80 check
 "
 
 echo "$server_config" | sudo dd status=none of=/etc/haproxy/haproxy.cfg
