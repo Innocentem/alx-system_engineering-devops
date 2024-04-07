@@ -1,2 +1,1 @@
-
-0x0F-load_balancer project
+This is 0x0F-load balancer ALX project
