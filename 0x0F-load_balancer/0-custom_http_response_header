@@ -36,7 +36,6 @@ for dir in /var/www/{html,error}; do
 	fi
 done
 
-# creating new index
 echo "Hello World!" > /var/www/html/index.html
 
 echo "Can't load page" > /var/www/html/error_404.html
