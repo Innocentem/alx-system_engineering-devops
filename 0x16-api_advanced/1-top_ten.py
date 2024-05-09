@@ -22,3 +22,4 @@ def top_ten(subreddit):
 
 if __name__ == "__main__":
     top_ten(argv[1])
+
